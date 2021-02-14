@@ -1388,9 +1388,12 @@ MonoBehaviour:
   startSpeed: 4
   step: 2
   useDebugVisualization: 0
+  newPower: {fileID: 0}
   leftPaddleCollision: {fileID: 8300000, guid: 2f8e3e2a4ee740f47836fb310a97ca5c, type: 3}
   rightPaddleCollision: {fileID: 8300000, guid: 8dfd0c76f91f999418b79181d5864869, type: 3}
   wallCollision: {fileID: 8300000, guid: 645e0f8c5d868a64baff1148f3acf5b6, type: 3}
+  powerUpCollision: {fileID: 0}
+  startingPitch: 1
 --- !u!54 &1312246550
 Rigidbody:
   m_ObjectHideFlags: 0

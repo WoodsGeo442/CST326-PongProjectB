@@ -13,7 +13,6 @@ public class ScoreKeeper : MonoBehaviour
 
     [SerializeField] private GameManager gameManager;
 
-
     private int leftScore = 0;
 
     private int rightScore = 0;

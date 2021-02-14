@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour {
     public AudioClip rightPaddleCollision;
     public AudioClip wallCollision;
     public AudioClip powerUpCollision;
+    public float startingPitch = 0;
 
     private float speed;
     private Rigidbody rb;
@@ -21,6 +22,7 @@ public class Ball : MonoBehaviour {
         rb = gameObject.GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         speed = startSpeed;
+        audioSource.pitch = startingPitch;
     }
 
     //-----------------------------------------------------------------------------
@@ -30,6 +32,7 @@ public class Ball : MonoBehaviour {
         speed = startSpeed;
         rb.MovePosition(Vector3.zero);
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.right * speed; // change to send to losing side
+        audioSource.pitch = startingPitch;
     }
 
     //-----------------------------------------------------------------------------
@@ -45,7 +48,8 @@ public class Ball : MonoBehaviour {
             {
                 audioSource.PlayOneShot(rightPaddleCollision);
             }
-            
+
+            audioSource.pitch += Time.deltaTime * startingPitch + 0.1f;
 
             speed += step;
             float heightAboveOrBelow = transform.position.z - collision.transform.position.z;
@@ -72,13 +76,13 @@ public class Ball : MonoBehaviour {
             audioSource.PlayOneShot(wallCollision);
         }
 
-        if(collision.gameObject.name == "PowerUpSpeed")
+        /*if(collision.gameObject.name == "PowerUpSpeed")
         {
             audioSource.PlayOneShot(powerUpCollision);
             newPower.private void OnTriggerEnter(Collider other) {
                 
             }
 
-        }
+        }*/
     }
 }
