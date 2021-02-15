@@ -15,9 +15,9 @@ public class PowerUp : MonoBehaviour
             Debug.Log("speed working");
         }
 
-        if(power.name == "PowerUpDirection"){
-            ball.reverseDirection();
-            Debug.Log("Direction working");
+        if(power.name == "PowerUpPaddle"){
+            ball.increasePaddle();
+            Debug.Log("Paddle working");
         }
     }
 }

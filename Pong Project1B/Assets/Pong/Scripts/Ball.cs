@@ -46,8 +46,8 @@ public class Ball : MonoBehaviour {
     }
 
     //-----------------------------------------------------------------------------
-    //Reverse Direction
-    public void reverseDirection()
+    //Increase Paddle Size
+    public void increasePaddle()
     {
         if(rb.velocity.x > 0)
         {

@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5021546101303335398, guid: 2b7078f365541a547b4fdd8ff9fa0290, type: 3}
       propertyPath: m_Name
-      value: PowerUpDirection
+      value: PowerUpPaddle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b7078f365541a547b4fdd8ff9fa0290, type: 3}
