@@ -14,8 +14,9 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
     private int leftScore = 0;
-
     private int rightScore = 0;
+    public Color textColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,11 @@ public class ScoreKeeper : MonoBehaviour
             leftTextScore.text = "00" + leftScore;
         }
 
+        if(leftScore >= 5)
+        {
+            leftTextScore.color = textColor;
+        }
+
         //For Right Text
         if(rightScore >= 100){
             rightTextScore.text = "" + rightScore;
@@ -48,6 +54,11 @@ public class ScoreKeeper : MonoBehaviour
 
         else {
             rightTextScore.text = "00" + rightScore;
+        }
+
+        if(rightScore >= 5)
+        {
+            rightTextScore.color = textColor;
         }
     }
     public void AddScore(Goal scoringSide)

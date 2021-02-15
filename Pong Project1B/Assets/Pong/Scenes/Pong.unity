@@ -415,6 +415,7 @@ MonoBehaviour:
   leftGoal: {fileID: 1790323960}
   rightGoal: {fileID: 1309198816}
   gameManager: {fileID: 789387648}
+  textColor: {r: 0.047587514, g: 1, b: 0, a: 1}
 --- !u!4 &587247140
 Transform:
   m_ObjectHideFlags: 0
@@ -593,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5021546101303335398, guid: 2b7078f365541a547b4fdd8ff9fa0290, type: 3}
       propertyPath: m_Name
-      value: PowerUpPaddle
+      value: PowerUpDirection
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b7078f365541a547b4fdd8ff9fa0290, type: 3}
@@ -614,6 +615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392500375196c3d43bf68ff16af0e63a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1312246549}
+  power: {fileID: 670014045}
 --- !u!23 &670014046
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1066,6 +1069,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &981968880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5101709849809952741, guid: 48219ca189323df4181a1abe17f23b46, type: 3}
+  m_PrefabInstance: {fileID: 5438524354046852061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392500375196c3d43bf68ff16af0e63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1108177989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1402,8 @@ MonoBehaviour:
   startSpeed: 4
   step: 2
   useDebugVisualization: 0
-  newPower: {fileID: 0}
+  paddleLeft: {fileID: 2013995986}
+  paddleRight: {fileID: 363885985}
   leftPaddleCollision: {fileID: 8300000, guid: 2f8e3e2a4ee740f47836fb310a97ca5c, type: 3}
   rightPaddleCollision: {fileID: 8300000, guid: 8dfd0c76f91f999418b79181d5864869, type: 3}
   wallCollision: {fileID: 8300000, guid: 645e0f8c5d868a64baff1148f3acf5b6, type: 3}
@@ -2124,6 +2139,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5101709849809952741, guid: 48219ca189323df4181a1abe17f23b46, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 1312246549}
+    - target: {fileID: 5101709849809952741, guid: 48219ca189323df4181a1abe17f23b46, type: 3}
+      propertyPath: power
+      value: 
+      objectReference: {fileID: 981968880}
     - target: {fileID: 5816092960387682300, guid: 48219ca189323df4181a1abe17f23b46, type: 3}
       propertyPath: m_Name
       value: PowerUpSpeed
